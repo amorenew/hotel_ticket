@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class Frame2473Widget extends StatelessWidget {
-  const Frame2473Widget({super.key});
+class ReservationTicket extends StatelessWidget {
+  const ReservationTicket({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +10,6 @@ class Frame2473Widget extends StatelessWidget {
     return SingleChildScrollView(
       child: Center(
         child: Container(
-            width: 375,
             height: 2287,
             alignment: Alignment.center,
             decoration: const BoxDecoration(
@@ -22,9 +21,7 @@ class Frame2473Widget extends StatelessWidget {
               ),
               color: Color.fromRGBO(250, 250, 250, 1),
             ),
-            child: Stack(
-              
-              children: <Widget>[
+            child: Stack(children: <Widget>[
               Positioned(
                   top: 12,
                   left: 161,
@@ -56,8 +53,8 @@ class Frame2473Widget extends StatelessWidget {
                                 decoration: const BoxDecoration(
                                   color: Color.fromRGBO(255, 255, 255, 1),
                                   borderRadius: BorderRadius.all(
-                                      Radius.elliptical(
-                                          4.189184665679932, 4.189184665679932)),
+                                      Radius.elliptical(4.189184665679932,
+                                          4.189184665679932)),
                                 ))),
                         Positioned(
                             top: 0,
@@ -68,8 +65,8 @@ class Frame2473Widget extends StatelessWidget {
                                 decoration: const BoxDecoration(
                                   color: Color.fromRGBO(255, 255, 255, 1),
                                   borderRadius: BorderRadius.all(
-                                      Radius.elliptical(
-                                          4.189184665679932, 4.189184665679932)),
+                                      Radius.elliptical(4.189184665679932,
+                                          4.189184665679932)),
                                 ))),
                         Positioned(
                             top: 0,
@@ -80,8 +77,8 @@ class Frame2473Widget extends StatelessWidget {
                                 decoration: const BoxDecoration(
                                   color: Color.fromRGBO(255, 255, 255, 1),
                                   borderRadius: BorderRadius.all(
-                                      Radius.elliptical(
-                                          4.189184665679932, 4.189184665679932)),
+                                      Radius.elliptical(4.189184665679932,
+                                          4.189184665679932)),
                                 ))),
                       ]))),
               Positioned(
@@ -203,7 +200,8 @@ class Frame2473Widget extends StatelessWidget {
                                             'From',
                                             textAlign: TextAlign.left,
                                             style: TextStyle(
-                                                color: Color.fromRGBO(0, 0, 0, 1),
+                                                color:
+                                                    Color.fromRGBO(0, 0, 0, 1),
                                                 fontFamily: 'SF Pro Display',
                                                 fontSize: 18,
                                                 letterSpacing:
@@ -216,7 +214,8 @@ class Frame2473Widget extends StatelessWidget {
                                             'Jan 01, 2022',
                                             textAlign: TextAlign.left,
                                             style: TextStyle(
-                                                color: Color.fromRGBO(0, 0, 0, 1),
+                                                color:
+                                                    Color.fromRGBO(0, 0, 0, 1),
                                                 fontFamily: 'SF Pro Display',
                                                 fontSize: 15,
                                                 letterSpacing:
@@ -251,7 +250,8 @@ class Frame2473Widget extends StatelessWidget {
                                             'Till',
                                             textAlign: TextAlign.left,
                                             style: TextStyle(
-                                                color: Color.fromRGBO(0, 0, 0, 1),
+                                                color:
+                                                    Color.fromRGBO(0, 0, 0, 1),
                                                 fontFamily: 'SF Pro Display',
                                                 fontSize: 18,
                                                 letterSpacing:
@@ -264,7 +264,8 @@ class Frame2473Widget extends StatelessWidget {
                                             'Jan 01, 2022',
                                             textAlign: TextAlign.left,
                                             style: TextStyle(
-                                                color: Color.fromRGBO(0, 0, 0, 1),
+                                                color:
+                                                    Color.fromRGBO(0, 0, 0, 1),
                                                 fontFamily: 'SF Pro Display',
                                                 fontSize: 15,
                                                 letterSpacing:
@@ -380,7 +381,8 @@ class Frame2473Widget extends StatelessWidget {
                                             'Room Count',
                                             textAlign: TextAlign.left,
                                             style: TextStyle(
-                                                color: Color.fromRGBO(0, 0, 0, 1),
+                                                color:
+                                                    Color.fromRGBO(0, 0, 0, 1),
                                                 fontFamily: 'SF Pro Display',
                                                 fontSize: 18,
                                                 letterSpacing:
@@ -395,7 +397,8 @@ class Frame2473Widget extends StatelessWidget {
                                             '5 ',
                                             textAlign: TextAlign.left,
                                             style: TextStyle(
-                                                color: Color.fromRGBO(0, 0, 0, 1),
+                                                color:
+                                                    Color.fromRGBO(0, 0, 0, 1),
                                                 fontFamily: 'SF Pro Display',
                                                 fontSize: 15,
                                                 letterSpacing:
@@ -446,8 +449,8 @@ class Frame2473Widget extends StatelessWidget {
                                               'Marriot Qatar Hotel',
                                               textAlign: TextAlign.left,
                                               style: TextStyle(
-                                                  color:
-                                                      Color.fromRGBO(0, 0, 0, 1),
+                                                  color: Color.fromRGBO(
+                                                      0, 0, 0, 1),
                                                   fontFamily: 'SF Pro Display',
                                                   fontSize: 14,
                                                   letterSpacing:
@@ -464,8 +467,8 @@ class Frame2473Widget extends StatelessWidget {
                                               'Address: Museum Park St, Doha, Qatar',
                                               textAlign: TextAlign.left,
                                               style: TextStyle(
-                                                  color:
-                                                      Color.fromRGBO(0, 0, 0, 1),
+                                                  color: Color.fromRGBO(
+                                                      0, 0, 0, 1),
                                                   fontFamily: 'SF Pro Display',
                                                   fontSize: 14,
                                                   letterSpacing:
@@ -582,11 +585,13 @@ class Frame2473Widget extends StatelessWidget {
                                                 style: TextStyle(
                                                     color: Color.fromRGBO(
                                                         0, 0, 0, 1),
-                                                    fontFamily: 'SF Pro Display',
+                                                    fontFamily:
+                                                        'SF Pro Display',
                                                     fontSize: 18,
                                                     letterSpacing:
                                                         0 /*percentages not used in flutter. defaulting to zero*/,
-                                                    fontWeight: FontWeight.normal,
+                                                    fontWeight:
+                                                        FontWeight.normal,
                                                     height: 1),
                                               ),
                                               SizedBox(height: 5),
@@ -596,11 +601,13 @@ class Frame2473Widget extends StatelessWidget {
                                                 style: TextStyle(
                                                     color: Color.fromRGBO(
                                                         83, 83, 83, 1),
-                                                    fontFamily: 'SF Pro Display',
+                                                    fontFamily:
+                                                        'SF Pro Display',
                                                     fontSize: 15,
                                                     letterSpacing:
                                                         0 /*percentages not used in flutter. defaulting to zero*/,
-                                                    fontWeight: FontWeight.normal,
+                                                    fontWeight:
+                                                        FontWeight.normal,
                                                     height: 1.3333333333333333),
                                               ),
                                             ],
@@ -622,11 +629,13 @@ class Frame2473Widget extends StatelessWidget {
                                                 style: TextStyle(
                                                     color: Color.fromRGBO(
                                                         0, 0, 0, 1),
-                                                    fontFamily: 'SF Pro Display',
+                                                    fontFamily:
+                                                        'SF Pro Display',
                                                     fontSize: 15,
                                                     letterSpacing:
                                                         0 /*percentages not used in flutter. defaulting to zero*/,
-                                                    fontWeight: FontWeight.normal,
+                                                    fontWeight:
+                                                        FontWeight.normal,
                                                     height:
                                                         1.5 /*PERCENT not supported*/
                                                     ),
@@ -638,11 +647,13 @@ class Frame2473Widget extends StatelessWidget {
                                                 style: TextStyle(
                                                     color: Color.fromRGBO(
                                                         83, 83, 83, 1),
-                                                    fontFamily: 'SF Pro Display',
+                                                    fontFamily:
+                                                        'SF Pro Display',
                                                     fontSize: 15,
                                                     letterSpacing:
                                                         0 /*percentages not used in flutter. defaulting to zero*/,
-                                                    fontWeight: FontWeight.normal,
+                                                    fontWeight:
+                                                        FontWeight.normal,
                                                     height: 1.3333333333333333),
                                               ),
                                             ],
@@ -664,11 +675,13 @@ class Frame2473Widget extends StatelessWidget {
                                                 style: TextStyle(
                                                     color: Color.fromRGBO(
                                                         0, 0, 0, 1),
-                                                    fontFamily: 'SF Pro Display',
+                                                    fontFamily:
+                                                        'SF Pro Display',
                                                     fontSize: 15,
                                                     letterSpacing:
                                                         0 /*percentages not used in flutter. defaulting to zero*/,
-                                                    fontWeight: FontWeight.normal,
+                                                    fontWeight:
+                                                        FontWeight.normal,
                                                     height:
                                                         1.5 /*PERCENT not supported*/
                                                     ),
@@ -680,11 +693,13 @@ class Frame2473Widget extends StatelessWidget {
                                                 style: TextStyle(
                                                     color: Color.fromRGBO(
                                                         83, 83, 83, 1),
-                                                    fontFamily: 'SF Pro Display',
+                                                    fontFamily:
+                                                        'SF Pro Display',
                                                     fontSize: 15,
                                                     letterSpacing:
                                                         0 /*percentages not used in flutter. defaulting to zero*/,
-                                                    fontWeight: FontWeight.normal,
+                                                    fontWeight:
+                                                        FontWeight.normal,
                                                     height: 1.3333333333333333),
                                               ),
                                             ],
@@ -804,8 +819,8 @@ class Frame2473Widget extends StatelessWidget {
                                             'Amanda Briggs',
                                             textAlign: TextAlign.left,
                                             style: TextStyle(
-                                                color:
-                                                    Color.fromRGBO(83, 83, 83, 1),
+                                                color: Color.fromRGBO(
+                                                    83, 83, 83, 1),
                                                 fontFamily: 'SF Pro Display',
                                                 fontSize: 15,
                                                 letterSpacing:
@@ -842,8 +857,8 @@ class Frame2473Widget extends StatelessWidget {
                                             'Amanda Briggs',
                                             textAlign: TextAlign.left,
                                             style: TextStyle(
-                                                color:
-                                                    Color.fromRGBO(83, 83, 83, 1),
+                                                color: Color.fromRGBO(
+                                                    83, 83, 83, 1),
                                                 fontFamily: 'SF Pro Display',
                                                 fontSize: 15,
                                                 letterSpacing:
@@ -876,7 +891,8 @@ class Frame2473Widget extends StatelessWidget {
                                             'Room Type',
                                             textAlign: TextAlign.left,
                                             style: TextStyle(
-                                                color: Color.fromRGBO(0, 0, 0, 1),
+                                                color:
+                                                    Color.fromRGBO(0, 0, 0, 1),
                                                 fontFamily: 'SF Pro Display',
                                                 fontSize: 18,
                                                 letterSpacing:
@@ -889,7 +905,8 @@ class Frame2473Widget extends StatelessWidget {
                                             'Presedential Wing',
                                             textAlign: TextAlign.left,
                                             style: TextStyle(
-                                                color: Color.fromRGBO(0, 0, 0, 1),
+                                                color:
+                                                    Color.fromRGBO(0, 0, 0, 1),
                                                 fontFamily: 'SF Pro Display',
                                                 fontSize: 15,
                                                 letterSpacing:
@@ -922,7 +939,8 @@ class Frame2473Widget extends StatelessWidget {
                                             'Room Number',
                                             textAlign: TextAlign.left,
                                             style: TextStyle(
-                                                color: Color.fromRGBO(0, 0, 0, 1),
+                                                color:
+                                                    Color.fromRGBO(0, 0, 0, 1),
                                                 fontFamily: 'SF Pro Display',
                                                 fontSize: 18,
                                                 letterSpacing:
@@ -935,7 +953,8 @@ class Frame2473Widget extends StatelessWidget {
                                             '52',
                                             textAlign: TextAlign.left,
                                             style: TextStyle(
-                                                color: Color.fromRGBO(0, 0, 0, 1),
+                                                color:
+                                                    Color.fromRGBO(0, 0, 0, 1),
                                                 fontFamily: 'SF Pro Display',
                                                 fontSize: 15,
                                                 letterSpacing:
@@ -958,7 +977,8 @@ class Frame2473Widget extends StatelessWidget {
                                             'Sleeps',
                                             textAlign: TextAlign.left,
                                             style: TextStyle(
-                                                color: Color.fromRGBO(0, 0, 0, 1),
+                                                color:
+                                                    Color.fromRGBO(0, 0, 0, 1),
                                                 fontFamily: 'SF Pro Display',
                                                 fontSize: 18,
                                                 letterSpacing:
@@ -987,7 +1007,8 @@ class Frame2473Widget extends StatelessWidget {
                                                           0 /*percentages not used in flutter. defaulting to zero*/,
                                                       fontWeight:
                                                           FontWeight.normal,
-                                                      height: 1.3333333333333333),
+                                                      height:
+                                                          1.3333333333333333),
                                                 ),
                                               ],
                                             ),
@@ -1080,8 +1101,8 @@ class Frame2473Widget extends StatelessWidget {
                                             'Amanda Briggs',
                                             textAlign: TextAlign.left,
                                             style: TextStyle(
-                                                color:
-                                                    Color.fromRGBO(83, 83, 83, 1),
+                                                color: Color.fromRGBO(
+                                                    83, 83, 83, 1),
                                                 fontFamily: 'SF Pro Display',
                                                 fontSize: 15,
                                                 letterSpacing:
@@ -1118,8 +1139,8 @@ class Frame2473Widget extends StatelessWidget {
                                             'Amanda Briggs',
                                             textAlign: TextAlign.left,
                                             style: TextStyle(
-                                                color:
-                                                    Color.fromRGBO(83, 83, 83, 1),
+                                                color: Color.fromRGBO(
+                                                    83, 83, 83, 1),
                                                 fontFamily: 'SF Pro Display',
                                                 fontSize: 15,
                                                 letterSpacing:
@@ -1152,7 +1173,8 @@ class Frame2473Widget extends StatelessWidget {
                                             'Room Type',
                                             textAlign: TextAlign.left,
                                             style: TextStyle(
-                                                color: Color.fromRGBO(0, 0, 0, 1),
+                                                color:
+                                                    Color.fromRGBO(0, 0, 0, 1),
                                                 fontFamily: 'SF Pro Display',
                                                 fontSize: 18,
                                                 letterSpacing:
@@ -1165,7 +1187,8 @@ class Frame2473Widget extends StatelessWidget {
                                             'Presedential Wing',
                                             textAlign: TextAlign.left,
                                             style: TextStyle(
-                                                color: Color.fromRGBO(0, 0, 0, 1),
+                                                color:
+                                                    Color.fromRGBO(0, 0, 0, 1),
                                                 fontFamily: 'SF Pro Display',
                                                 fontSize: 15,
                                                 letterSpacing:
@@ -1198,7 +1221,8 @@ class Frame2473Widget extends StatelessWidget {
                                             'Room Number',
                                             textAlign: TextAlign.left,
                                             style: TextStyle(
-                                                color: Color.fromRGBO(0, 0, 0, 1),
+                                                color:
+                                                    Color.fromRGBO(0, 0, 0, 1),
                                                 fontFamily: 'SF Pro Display',
                                                 fontSize: 18,
                                                 letterSpacing:
@@ -1211,7 +1235,8 @@ class Frame2473Widget extends StatelessWidget {
                                             '52',
                                             textAlign: TextAlign.left,
                                             style: TextStyle(
-                                                color: Color.fromRGBO(0, 0, 0, 1),
+                                                color:
+                                                    Color.fromRGBO(0, 0, 0, 1),
                                                 fontFamily: 'SF Pro Display',
                                                 fontSize: 15,
                                                 letterSpacing:
@@ -1234,7 +1259,8 @@ class Frame2473Widget extends StatelessWidget {
                                             'Sleeps',
                                             textAlign: TextAlign.left,
                                             style: TextStyle(
-                                                color: Color.fromRGBO(0, 0, 0, 1),
+                                                color:
+                                                    Color.fromRGBO(0, 0, 0, 1),
                                                 fontFamily: 'SF Pro Display',
                                                 fontSize: 18,
                                                 letterSpacing:
@@ -1263,7 +1289,8 @@ class Frame2473Widget extends StatelessWidget {
                                                           0 /*percentages not used in flutter. defaulting to zero*/,
                                                       fontWeight:
                                                           FontWeight.normal,
-                                                      height: 1.3333333333333333),
+                                                      height:
+                                                          1.3333333333333333),
                                                 ),
                                               ],
                                             ),
@@ -1331,7 +1358,8 @@ class Frame2473Widget extends StatelessWidget {
                                               Container(
                                                   width: 150,
                                                   height: 225,
-                                                  decoration: const BoxDecoration(
+                                                  decoration:
+                                                      const BoxDecoration(
                                                     color: Color.fromRGBO(
                                                         217, 217, 217, 1),
                                                     image: DecorationImage(
@@ -1343,7 +1371,8 @@ class Frame2473Widget extends StatelessWidget {
                                               Container(
                                                   width: 150,
                                                   height: 225,
-                                                  decoration: const BoxDecoration(
+                                                  decoration:
+                                                      const BoxDecoration(
                                                     color: Color.fromRGBO(
                                                         217, 217, 217, 1),
                                                     image: DecorationImage(
@@ -1355,7 +1384,8 @@ class Frame2473Widget extends StatelessWidget {
                                               Container(
                                                   width: 150,
                                                   height: 225,
-                                                  decoration: const BoxDecoration(
+                                                  decoration:
+                                                      const BoxDecoration(
                                                     color: Color.fromRGBO(
                                                         217, 217, 217, 1),
                                                     image: DecorationImage(
@@ -1367,7 +1397,8 @@ class Frame2473Widget extends StatelessWidget {
                                               Container(
                                                   width: 150,
                                                   height: 225,
-                                                  decoration: const BoxDecoration(
+                                                  decoration:
+                                                      const BoxDecoration(
                                                     image: DecorationImage(
                                                         image: AssetImage(
                                                             'assets/images/Rectangle39.png'),
@@ -1377,7 +1408,8 @@ class Frame2473Widget extends StatelessWidget {
                                               Container(
                                                   width: 150,
                                                   height: 225,
-                                                  decoration: const BoxDecoration(
+                                                  decoration:
+                                                      const BoxDecoration(
                                                     image: DecorationImage(
                                                         image: AssetImage(
                                                             'assets/images/Rectangle40.png'),
@@ -1387,7 +1419,8 @@ class Frame2473Widget extends StatelessWidget {
                                               Container(
                                                   width: 150,
                                                   height: 225,
-                                                  decoration: const BoxDecoration(
+                                                  decoration:
+                                                      const BoxDecoration(
                                                     image: DecorationImage(
                                                         image: AssetImage(
                                                             'assets/images/Rectangle41.png'),
