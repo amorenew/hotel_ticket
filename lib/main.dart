@@ -204,8 +204,8 @@ class ThemeWidget extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: 45,
-          width: 100,
+          height: 40,
+          width: 95,
           child: ThemeSwitchButton(
             isLightMode: theme.isLightMode(),
             onPressed: () {
