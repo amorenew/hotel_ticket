@@ -10,7 +10,7 @@ class EventProvider extends BaseEventProvider {
   Future<EventsResponse?> getEvents() async {
     var response = await apiCall(url: urlListEvents);
     if (response!.statusCode == 200) {
-      var data = json.decode(response.body);
+      var data = json.decode(response.toString());
       return EventsResponse.fromJson(data);
     } else {
       return EventsResponse(error: true);
