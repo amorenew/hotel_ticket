@@ -40,7 +40,7 @@ class ReservationTicket extends StatelessWidget {
               Positioned(
                   top: 14,
                   left: 330.02734375,
-                  child: Container(
+                  child: SizedBox(
                       width: 20.945940017700195,
                       height: 4.189184665679932,
                       child: Stack(children: <Widget>[
@@ -306,7 +306,7 @@ class ReservationTicket extends StatelessWidget {
                                       child: Row(
                                         mainAxisSize: MainAxisSize.min,
                                         children: <Widget>[
-                                          Container(
+                                          SizedBox(
                                               width: 103,
                                               height: 45,
                                               child: Stack(children: <Widget>[
@@ -418,7 +418,7 @@ class ReservationTicket extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 40),
-                        Container(
+                        SizedBox(
                             width: 325,
                             height: 136.8173828125,
                             child: Stack(children: <Widget>[
@@ -1434,10 +1434,10 @@ class ReservationTicket extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 40),
-                        Container(
+                        const SizedBox(
                             width: 325,
                             height: 47,
-                            child: const Stack(children: <Widget>[
+                            child: Stack(children: <Widget>[
                               Positioned(
                                   top: 0,
                                   left: 0,

@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hotel_ticket/application/bloc/events_bloc.dart';
 import 'package:hotel_ticket/domain/respositories/event/event_repository.dart';
-import 'package:hotel_ticket/presentation/ThemeManager.dart';
+import 'package:hotel_ticket/presentation/theme_manager.dart';
 import 'package:hotel_ticket/presentation/reservation_ticket.dart';
 import 'package:hotel_ticket/presentation/theme_switch_button.dart';
 import 'package:provider/provider.dart';
