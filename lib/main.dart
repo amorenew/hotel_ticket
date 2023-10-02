@@ -1,8 +1,12 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hotel_ticket/ThemeManager.dart';
+import 'package:hotel_ticket/application/bloc/events_bloc.dart';
+import 'package:hotel_ticket/data/providers/user_event/event_provider.dart';
+import 'package:hotel_ticket/domain/respositories/event/event_repository.dart';
 import 'package:hotel_ticket/reservation_ticket.dart';
 import 'package:hotel_ticket/theme_switch_button.dart';
 import 'package:provider/provider.dart';
@@ -11,9 +15,18 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
   runApp(
-    ChangeNotifierProvider<ThemeNotifier>(
-      create: (_) => ThemeNotifier(),
-      child: const App(),
+    MultiRepositoryProvider(
+      providers: [
+        RepositoryProvider<EventRepository>(
+          create: (context) => EventRepository(
+            EventProvider(),
+          ),
+        ),
+      ],
+      child: ChangeNotifierProvider<ThemeNotifier>(
+        create: (_) => ThemeNotifier(),
+        child: const App(),
+      ),
     ),
   );
 }
@@ -23,37 +36,44 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Consumer<ThemeNotifier>(
-        builder: (context, theme, _) {
-          final isLightMode = theme.isLightMode();
+    return BlocProvider(
+      create: (_) => EventsBloc(
+        RepositoryProvider.of<EventRepository>(context),
+      ),
+      child: SafeArea(
+        child: Consumer<ThemeNotifier>(
+          builder: (context, theme, _) {
+            final isLightMode = theme.isLightMode();
 
-          return MaterialApp(
-            theme: theme.getTheme(),
-            home: Scaffold(
-              body: Container(
-                width: MediaQuery.of(context).size.width,
-                color: theme.getTheme().primaryColor,
-                padding: const EdgeInsets.all(20),
-                child: Column(
-                  children: [
-                    const SizedBox(height: 50),
-                    ThemeWidget(theme: theme),
-                    const Spacer(),
-                    OpenReservationButton(isLightMode: isLightMode),
-                    const SizedBox(height: 24),
-                    ShowIOSTicket(isLightMode: isLightMode),
-                    const SizedBox(height: 24),
-                    ShowAndroidTicket(isLightMode: isLightMode),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * .05,
-                    )
-                  ],
+            context.read<EventsBloc>().add(ListEvents());
+
+            return MaterialApp(
+              theme: theme.getTheme(),
+              home: Scaffold(
+                body: Container(
+                  width: MediaQuery.of(context).size.width,
+                  color: theme.getTheme().primaryColor,
+                  padding: const EdgeInsets.all(20),
+                  child: Column(
+                    children: [
+                      const SizedBox(height: 50),
+                      ThemeWidget(theme: theme),
+                      const Spacer(),
+                      OpenReservationButton(isLightMode: isLightMode),
+                      const SizedBox(height: 24),
+                      ShowIOSTicket(isLightMode: isLightMode),
+                      const SizedBox(height: 24),
+                      ShowAndroidTicket(isLightMode: isLightMode),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * .05,
+                      )
+                    ],
+                  ),
                 ),
               ),
-            ),
-          );
-        },
+            );
+          },
+        ),
       ),
     );
   }

@@ -7,12 +7,19 @@ Future<http.Response?> apiCall({
   required String url,
   Map<String, String>? body,
 }) async {
-  var endPoint = Uri.https(domain, url);
+  var endPoint = Uri.parse(domain + url);
+  final headers2 = {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+    'Authorization': 'Bearer ${Credential.clientToken}',
+  };
+
   try {
-    return await http.get(
+    final response = await http.get(
       endPoint,
-      headers: {'Authorization': 'Bearer ${Credential.clientToken}'},
+      headers: headers2,
     );
+    return response;
   } catch (ex) {
     debugPrint(ex.toString());
     return null;
