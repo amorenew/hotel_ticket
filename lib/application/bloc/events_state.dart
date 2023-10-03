@@ -3,7 +3,7 @@ part of 'events_bloc.dart';
 class EventsState with EquatableMixin {
   EventsState({
     required this.isLoading,
-    this.success = true,
+    this.success = false,
     this.error = '',
     this.reservations = const [],
   });

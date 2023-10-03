@@ -6,11 +6,23 @@ class ThemeNotifier with ChangeNotifier {
     primarySwatch: Colors.grey,
     primaryColor: const Color(0xFF171717),
     brightness: Brightness.dark,
-    //backgroundColor: const Color(0xFF212121),
     dividerColor: Colors.black12,
     iconTheme: const IconThemeData(color: Colors.white),
-
     fontFamily: 'SFProDisplay',
+    bottomSheetTheme: const BottomSheetThemeData(
+      backgroundColor: Colors.black,
+    ),
+    textTheme: const TextTheme(
+      titleMedium: TextStyle(
+        color: Colors.white,
+      ),
+      titleSmall: TextStyle(
+        color: Color(0xFF9A9A9A),
+      ),
+    ),
+    cardTheme: const CardTheme(
+      color: Color(0xFF2D2D2D),
+    ),
   );
 
   final lightTheme = ThemeData(
@@ -18,9 +30,22 @@ class ThemeNotifier with ChangeNotifier {
     primaryColor: const Color(0xFFD8D8D8),
     brightness: Brightness.light,
     iconTheme: const IconThemeData(color: Colors.black),
-    //backgroundColor: const Color(0xFFE5E5E5),
     dividerColor: Colors.white54,
     fontFamily: 'SFProDisplay',
+    bottomSheetTheme: const BottomSheetThemeData(
+      backgroundColor: Colors.white,
+    ),
+    textTheme: const TextTheme(
+      titleMedium: TextStyle(
+        color: Colors.black,
+      ),
+      titleSmall: TextStyle(
+        color: Color(0xFF4C4C4C),
+      ),
+    ),
+    cardTheme: const CardTheme(
+      color: Color(0xFFE9E9E9),
+    ),
   );
 
   ThemeData? _themeData;
