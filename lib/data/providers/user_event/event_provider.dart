@@ -9,7 +9,7 @@ class EventProvider extends BaseEventProvider {
   @override
   Future<EventsResponse?> getEvents() async {
     var response = await apiCall(url: urlListEvents);
-    if (response!.statusCode == 200) {
+    if (response?.statusCode == 200) {
       var data = json.decode(response.toString());
       return EventsResponse.fromJson(data);
     } else {

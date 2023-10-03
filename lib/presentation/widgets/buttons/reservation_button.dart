@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hotel_ticket/application/bloc/events_bloc.dart';
+import 'package:hotel_ticket/presentation/widgets/buttons/retry_button.dart';
 import 'package:hotel_ticket/presentation/widgets/reservation_ticket.dart';
 
 class OpenReservationButton extends StatelessWidget {
@@ -34,6 +35,10 @@ class OpenReservationButton extends StatelessWidget {
                 heightFactor: 0.9,
                 child: BlocBuilder<EventsBloc, EventsState>(
                   builder: (context, state) {
+                    if (state.reservations.isEmpty) {
+                      return const RetryButton();
+                    }
+
                     return ReservationTicket(
                       reservation: state.reservations.first,
                     );

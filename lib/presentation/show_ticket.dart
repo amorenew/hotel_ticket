@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hotel_ticket/application/bloc/events_bloc.dart';
+import 'package:hotel_ticket/presentation/widgets/buttons/retry_button.dart';
 import 'package:hotel_ticket/presentation/widgets/ticket/handle_widget.dart';
 import 'package:hotel_ticket/presentation/widgets/ticket/ticket_widget.dart';
 
@@ -12,6 +13,9 @@ Future<void> showTicket(BuildContext context) {
     builder: (BuildContext context) {
       return BlocBuilder<EventsBloc, EventsState>(
         builder: (context, state) {
+            if (state.reservations.isEmpty) {
+            return const RetryButton();
+          }
           final userTicket = state.reservations.first.userTickets!.first;
 
           return Container(
