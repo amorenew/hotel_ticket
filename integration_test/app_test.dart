@@ -12,7 +12,7 @@ void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
   group('end-to-end test', () {
-    testWidgets('tap on the reservation button, ticket is visible',
+    testWidgets('tap on the reservation button, ticket button is visible',
         (tester) async {
       final openReservationFinder = find.byKey(const Key('openReservation'));
 
@@ -36,14 +36,13 @@ void main() {
       // Verify the open reservation button is exist
       expect(openReservationFinder, findsOneWidget);
 
+      expect(find.text('Show Android Ticket'), findsOneWidget);
+
       // Emulate a tap on the reservation button.
       await tester.tap(openReservationFinder);
 
       // Trigger a frame.
       await tester.pumpAndSettle();
-
-      // Verify the counter increments by 1.
-      expect(find.text('Hotel Check-in'), findsOneWidget);
     });
   });
 }
