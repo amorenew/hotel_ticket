@@ -13,5 +13,6 @@ The app is tested on Android and macOS.
 
 ### Sample Video
 
-<video src='https://github.com/amorenew/hotel_ticket/raw/main/sample.mp4' width=180/>
+
+  - <video src='https://github.com/amorenew/hotel_ticket/raw/main/sample.mp4' width=180/>
 

@@ -32,6 +32,7 @@ void main() {
           ),
         ),
       );
+      await tester.pumpAndSettle(const Duration(seconds: 10));
 
       // Verify the open reservation button is exist
       expect(openReservationFinder, findsOneWidget);

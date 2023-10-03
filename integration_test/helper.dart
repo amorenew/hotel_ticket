@@ -1,7 +1,8 @@
 import 'dart:io';
 import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:integration_test/integration_test.dart';
 
-takeScreenshot(tester, binding) async {
+takeScreenshot(tester, IntegrationTestWidgetsFlutterBinding  binding) async {
   if (kIsWeb) {
     await binding.takeScreenshot('test-screenshot');
     return;
