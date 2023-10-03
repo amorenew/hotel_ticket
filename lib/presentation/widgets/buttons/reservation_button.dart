@@ -17,6 +17,7 @@ class OpenReservationButton extends StatelessWidget {
       width: 286,
       height: 50,
       child: OutlinedButton(
+        key: const Key('openReservation'),
         style: OutlinedButton.styleFrom(
           backgroundColor: isLightMode ? const Color(0xFF0E1A2D) : Colors.white,
           shape: const RoundedRectangleBorder(),
