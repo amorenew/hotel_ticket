@@ -32,9 +32,10 @@ dev_dependencies:
     sdk: flutter
   integration_test:
     sdk: flutter
+  pigeon: ^12.0.0
 
 flutter:
-  uses-material-design: true
+  uses-material-design: false
 
   fonts:
     - family: SFProDisplay

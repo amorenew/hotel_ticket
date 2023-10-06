@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hotel_ticket/presentation/show_ticket.dart';
+import 'package:hotel_ticket/ticket_data.g.dart';
 
 class ShowAndroidTicket extends StatelessWidget {
   const ShowAndroidTicket({
@@ -18,7 +18,10 @@ class ShowAndroidTicket extends StatelessWidget {
         style: TextButton.styleFrom(
           foregroundColor: const Color(0xFF0E1A2D),
         ),
-        onPressed: () => showTicket(context),
+        onPressed: () {
+          TicketHostApi().sendTicketData(TicketData(code: Code.one, data: {}));
+         // showTicket(context);
+        },
         child: Text(
           'Show Android Ticket',
           style: TextStyle(
