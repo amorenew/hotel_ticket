@@ -43,41 +43,33 @@ class FlutterError (
   val details: Any? = null
 ) : Throwable()
 
-enum class Code(val raw: Int) {
-  ONE(0),
-  TWO(1);
-
-  companion object {
-    fun ofRaw(raw: Int): Code? {
-      return values().firstOrNull { it.raw == raw }
-    }
-  }
-}
-
 /** Generated class from Pigeon that represents data sent in messages. */
 data class TicketData (
-  val name: String? = null,
-  val description: String? = null,
-  val code: Code,
-  val data: Map<String?, String?>
+  val name: String,
+  val imageUrl: String,
+  val ticketNumber: String,
+  val type: String,
+  val seat: String
 
 ) {
   companion object {
     @Suppress("UNCHECKED_CAST")
     fun fromList(list: List<Any?>): TicketData {
-      val name = list[0] as String?
-      val description = list[1] as String?
-      val code = Code.ofRaw(list[2] as Int)!!
-      val data = list[3] as Map<String?, String?>
-      return TicketData(name, description, code, data)
+      val name = list[0] as String
+      val imageUrl = list[1] as String
+      val ticketNumber = list[2] as String
+      val type = list[3] as String
+      val seat = list[4] as String
+      return TicketData(name, imageUrl, ticketNumber, type, seat)
     }
   }
   fun toList(): List<Any?> {
     return listOf<Any?>(
       name,
-      description,
-      code.raw,
-      data,
+      imageUrl,
+      ticketNumber,
+      type,
+      seat,
     )
   }
 }

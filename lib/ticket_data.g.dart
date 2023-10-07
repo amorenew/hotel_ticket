@@ -17,43 +17,43 @@ List<Object?> wrapResponse({Object? result, PlatformException? error, bool empty
   return <Object?>[error.code, error.message, error.details];
 }
 
-enum Code {
-  one,
-  two,
-}
-
 class TicketData {
   TicketData({
-    this.name,
-    this.description,
-    required this.code,
-    required this.data,
+    required this.name,
+    required this.imageUrl,
+    required this.ticketNumber,
+    required this.type,
+    required this.seat,
   });
 
-  String? name;
+  String name;
 
-  String? description;
+  String imageUrl;
 
-  Code code;
+  String ticketNumber;
 
-  Map<String?, String?> data;
+  String type;
+
+  String seat;
 
   Object encode() {
     return <Object?>[
       name,
-      description,
-      code.index,
-      data,
+      imageUrl,
+      ticketNumber,
+      type,
+      seat,
     ];
   }
 
   static TicketData decode(Object result) {
     result as List<Object?>;
     return TicketData(
-      name: result[0] as String?,
-      description: result[1] as String?,
-      code: Code.values[result[2]! as int],
-      data: (result[3] as Map<Object?, Object?>?)!.cast<String?, String?>(),
+      name: result[0]! as String,
+      imageUrl: result[1]! as String,
+      ticketNumber: result[2]! as String,
+      type: result[3]! as String,
+      seat: result[4]! as String,
     );
   }
 }

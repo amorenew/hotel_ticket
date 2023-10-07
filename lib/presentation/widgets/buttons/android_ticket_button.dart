@@ -19,8 +19,14 @@ class ShowAndroidTicket extends StatelessWidget {
           foregroundColor: const Color(0xFF0E1A2D),
         ),
         onPressed: () {
-          TicketHostApi().sendTicketData(TicketData(code: Code.one, data: {}));
-         // showTicket(context);
+          TicketHostApi().sendTicketData(TicketData(
+            imageUrl: 'https://www.google.com',
+            name: 'Amr',
+            ticketNumber: '21',
+            type: 'dasas',
+            seat: 'ad',
+          ));
+          // showTicket(context);
         },
         child: Text(
           'Show Android Ticket',
