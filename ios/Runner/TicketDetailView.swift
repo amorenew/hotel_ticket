@@ -15,8 +15,7 @@ struct TicketDetailView: View {
     var body: some View {
         ScrollView ([.horizontal,.vertical]){
             VStack(alignment:HorizontalAlignment.leading,spacing: .zero) {
-                Text(//ticketInfo.destinationCode
-                    "Tickets:")
+                Text("Tickets:")
                 .font(.custom("SF Pro Display", size: 18, relativeTo: .title3))
                 .padding(.bottom, 10)
                 TicketDetailTopView(ticketInfo: ticketInfo)

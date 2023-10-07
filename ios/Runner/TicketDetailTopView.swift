@@ -13,15 +13,11 @@ struct TicketDetailTopView: View {
     
     var body: some View {
         HStack{
-            AvatarView(url: URL(string: "https://ishtiz.com/wp-content/uploads/2021/04/cropped-facebookIcon.png")!, size: 35).padding(.trailing,5)
+            AvatarView(url: URL(string:ticketInfo.imageUrl)!, size: 35).padding(.trailing,5)
             VStack(alignment: .leading) {
-                Text(//ticketInfo.destinationCode
-                    "Marilyn Bridges James")
+                Text(ticketInfo.name)
                 .font(.custom("SF Pro Display", size: 18, relativeTo: .title3))
-                Text(
-                    //ticketInfo.destination
-                    "#170122708123"
-                ).font(.custom("SF Pro Display", size: 15, relativeTo: .caption2))
+                Text("#"+ticketInfo.ticketNumber).font(.custom("SF Pro Display", size: 15, relativeTo: .caption2))
                     .fontWeight(.semibold)
                     .foregroundColor(.gray)
             }

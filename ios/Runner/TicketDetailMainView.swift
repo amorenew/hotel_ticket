@@ -14,13 +14,10 @@ struct TicketDetailMainView: View {
     var body: some View {
         VStack(alignment: .leading,spacing: 15.0) {
             HStack(alignment: .center) {
-                Text(//ticketInfo.destinationCode
-                    "Ticket Type:")
+                Text("Ticket Type:")
                 .font(.custom("SF Pro Display", size: 15))
                 .foregroundColor(.black)
-                Text(
-                    //ticketInfo.destination
-                    "MATCH Business Seat "
+                Text(ticketInfo.type
                 ).font(.custom("SF Pro Display", size: 15))
                     .fontWeight(.semibold)
                     .foregroundColor(Color.init(hex: "#4C4C4C"))
@@ -30,10 +27,7 @@ struct TicketDetailMainView: View {
                     "Seat:")
                 .font(.custom("SF Pro Display", size: 15))
                 .foregroundColor(.black)
-                Text(
-                    //ticketInfo.destination
-                    "Block 112 / Row S / Seat 1"
-                ).font(.custom("SF Pro Display", size: 15))
+                Text(ticketInfo.seat).font(.custom("SF Pro Display", size: 15))
                     .fontWeight(.semibold)
                     .foregroundColor(Color.init(hex: "#4C4C4C"))
             }

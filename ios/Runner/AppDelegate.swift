@@ -1,6 +1,7 @@
 import UIKit
 import SwiftUI
 import Flutter
+import FittedSheets
 
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
@@ -23,15 +24,20 @@ import Flutter
 class TicketController: TicketHostApi {
     
     let viewControllerHolder: FlutterViewController
-
+    
     init(viewControllerHolder: FlutterViewController) {
         self.viewControllerHolder = viewControllerHolder
     }
 
     func sendTicketData(ticketData: TicketData, completion: @escaping (Result<Bool, Error>) -> Void) {
-        
-        self.viewControllerHolder.present(style: .pageSheet) {
-            TicketDetailView(ticketInfo: TicketData(name:"Amr", imageUrl:"https://www.google.com", ticketNumber:"Number", type: "Type", seat: "Seat"))        }
+        let vc = UIHostingController(rootView: TicketDetailView(ticketInfo: ticketData))
+        let sheetController = SheetViewController(controller: vc)
+        let options = SheetOptions(shrinkPresentingViewController: false)
+        viewControllerHolder.present(sheetController, animated: true, completion: nil)
+
+        self.viewControllerHolder.present(style: .overFullScreen) {
+            TicketDetailView(ticketInfo: ticketData)
+        }
 
     }
     
