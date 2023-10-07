@@ -86,7 +86,3 @@ class ReservationTicket extends StatelessWidget {
     );
   }
 }
-
-
-
-

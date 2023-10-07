@@ -13,7 +13,7 @@ Future<void> showTicket(BuildContext context) {
     builder: (BuildContext context) {
       return BlocBuilder<EventsBloc, EventsState>(
         builder: (context, state) {
-            if (state.reservations.isEmpty) {
+          if (state.reservations.isEmpty) {
             return const RetryButton();
           }
           final userTicket = state.reservations.first.userTickets!.first;

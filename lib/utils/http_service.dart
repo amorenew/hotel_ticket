@@ -30,7 +30,7 @@ Future<Response?> apiCall({
       DioCacheInterceptor(options: cacheOptions),
     )
     ..options.headers = headers;
-    
+
   try {
     var response = await dio.get(
       endPoint,

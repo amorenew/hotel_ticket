@@ -7,7 +7,9 @@ import 'dart:typed_data' show Float64List, Int32List, Int64List, Uint8List;
 
 import 'package:flutter/foundation.dart' show ReadBuffer, WriteBuffer;
 import 'package:flutter/services.dart';
-List<Object?> wrapResponse({Object? result, PlatformException? error, bool empty = false}) {
+
+List<Object?> wrapResponse(
+    {Object? result, PlatformException? error, bool empty = false}) {
   if (empty) {
     return <Object?>[];
   }
@@ -73,7 +75,7 @@ class _TicketHostApiCodec extends StandardMessageCodec {
   @override
   Object? readValueOfType(int type, ReadBuffer buffer) {
     switch (type) {
-      case 128: 
+      case 128:
         return TicketData.decode(readValue(buffer)!);
       default:
         return super.readValueOfType(type, buffer);
